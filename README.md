@@ -10,6 +10,8 @@
 
 `npm install jsonwebtoken`
 
+`http://localhost:3000/protected`
+
 A JSON Web Token (JWT) in Node.js is often used for authentication purposes. 
 JWT is a compact, URL-safe means of representing claims between two parties. 
 In the context of a Node.js application, 

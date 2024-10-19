@@ -4,6 +4,7 @@ const app = express();
 const PORT = 3000;
 // Define a secret key (this should be kept safe and secure)
 const secretKey = 'your_secret_key';
+console.log('Secret Key:', secretKey);
 // Create a payload (for example, user information)
 const user = { id: 1, username: 'johndoe', email: 'johndoe@example.com' };
 // Generate a JWT
@@ -12,8 +13,8 @@ console.log('Generated Token:', token);
 // Assume token is the JWT received from the client
 jwt.verify(token, secretKey, (err, decoded) => {
   if (err) { console.error('Token verification failed:', err.message); } else {
-    console.log('Decoded Token:', decoded);
     // You can now accessdecodedwhich contains the original payload data (like user id, username, etc.)
+    console.log('Decoded Token:', decoded);
   }
 });
 // Middleware to authenticate requests

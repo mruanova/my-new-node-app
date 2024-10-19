@@ -133,4 +133,6 @@ Send the token:
 The client stores the token 
 (e.g., in local storage or cookies) and sends it with subsequent requests in the Authorization header.
 
-Verify the token: The server checks the token's validity for each protected request.
+Verify the token: 
+
+The server checks the token's validity for each protected request.

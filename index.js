@@ -1,12 +1,11 @@
 const jwt = require('jsonwebtoken');
-// Create a payload (for example, user information)
-const user = { id: 1, username: 'johndoe', email: 'johndoe@example.com' };
 const express = require('express');
-const jwt = require('jsonwebtoken');
 const app = express();
 const PORT = 3000;
 // Define a secret key (this should be kept safe and secure)
 const secretKey = 'your_secret_key';
+// Create a payload (for example, user information)
+const user = { id: 1, username: 'johndoe', email: 'johndoe@example.com' };
 // Generate a JWT
 const token = jwt.sign(user, secretKey, { expiresIn: '1h' }); // token expires in 1 hour
 console.log('Generated Token:', token);
@@ -35,7 +34,7 @@ const authenticateToken = (req, res, next) => {
 app.get('/protected', authenticateToken, (req, res) => { res.send('This is a protected route. Your token is valid.'); });
 // hello
 app.get('/', (req, res) => {
-  res.send('Hello, Node!');
+  res.send(user);
 });
 // Start server
 app.listen(PORT, () => {
